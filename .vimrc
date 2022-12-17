@@ -9,6 +9,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
