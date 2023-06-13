@@ -1,0 +1,3 @@
+source-file ~/.nord
+
+set -g mouse on
