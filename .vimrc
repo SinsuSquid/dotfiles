@@ -16,7 +16,7 @@ call plug#end()
 set number
 set mouse=a
 colorscheme nord
-set foldingmethod=manual
+set foldmethod=manual
 
 " Syntastic
 set statusline+=%#warningmsg#
