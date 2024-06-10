@@ -1,2 +1,2 @@
-# MyVimrc
-Personal .vimrc
+# PersonalSettings
+My Personal Settings
