@@ -1,2 +1,0 @@
-# PersonalSettings
-My Personal Settings
