@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
