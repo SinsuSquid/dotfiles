@@ -13,7 +13,7 @@ cp ./.vimrc ${HOME}/.vimrc
 # .tmux.conf
 echo "cp ./.tmux.conf ${HOME}/.tmux.conf"
 cp ./.tmux.conf ${HOME}/.tmux.conf
-echo "cp ./.tmux.nord ${HOME}/.tmux.nord"
-cp ./.tmux.nord ${HOME}/.tmux.nord
+echo "cp ./.tmux.dracula -p ${HOME}/.config/tmux.dracula"
+cp ./.tmux.dracula -p ${HOME}/.config/tmux.dracula
 
 echo "Done! >:D"
