@@ -1,17 +1,18 @@
 call plug#begin()
 
 Plug 'preservim/nerdtree'
-Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
-" Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'SinsuSquid/MAGI-theme'
 
 call plug#end()
 
-let g:dracula_colorterm = 0
 set number
+set termguicolors
 set mouse=a
-colorscheme dracula
+colorscheme magi
 set foldmethod=manual
+
+let g:airline_theme='magi'
+let g:airline_powerline_fonts = 1
