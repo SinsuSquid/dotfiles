@@ -1,30 +1,28 @@
 #!/bin/bash
 
-# Oh my bash
-echo "Installing oh-my-bash"
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+# Starship Prompt
+echo "🚀 Installing Starship..."
+curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 # .bashrc
-echo "cat ./.bashrc >> ${HOME}/.bashrc" 
+echo "📝 Updating .bashrc..."
 cat ./.bashrc >> ${HOME}/.bashrc
-echo "source ${HOME}/.bashrc"
-source ${HOME}/.bashrc
 
 # .tmux.conf
-echo "cat ./.tmux.conf >> ${HOME}/.tmux.conf" 
+echo "📟 Updating .tmux.conf..."
 cat ./.tmux.conf >> ${HOME}/.tmux.conf
 
 # vim-plug
-echo "Installing vim-plug"
+echo "🖌️ Installing vim-plug..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    
+
 # .vimrc
-echo "cp ./.vimrc ${HOME}/.vimrc"
+echo "🖌️ Updating .vimrc..."
 cp ./.vimrc ${HOME}/.vimrc
 
-# Magi Theme
-echo "Installing MAGI-theme"
+# MAGI Theme Suite
+echo "🧠 Installing MAGI-theme Suite..."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/SinsuSquid/MAGI-theme/main/install.sh)"
 
-echo "Done! >:D"
+echo -e "\n✨ (๑˃ᴗ˂)ﻭ Dotfiles synchronization complete, Senpai!"
