@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Move to the directory where this script is located
+cd "$(dirname "$0")"
+
+
 # Function to back up existing files or remove existing symlinks to prevent Stow conflicts
 prepare_stow() {
     local target="$1"
