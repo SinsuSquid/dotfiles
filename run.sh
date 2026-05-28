@@ -15,26 +15,29 @@ NC='\033[0m' # No Color
 echo -e "🛠️  ${GREEN}Verifying system dependencies...${NC}"
 
 install_pkg() {
-    if ! command -v $1 &> /dev/null; then
-        echo -e "   - ${CYAN}$1${NC} not found. Installing..."
+    local cmd="$1"
+    local pkg="${2:-$1}"
+    if ! command -v "$cmd" &> /dev/null; then
+        echo -e "   - ${CYAN}$pkg${NC} not found. Installing..."
         if command -v apt-get &> /dev/null; then
             sudo apt-get update -y > /dev/null 2>&1
-            sudo apt-get install -y $1 > /dev/null 2>&1
+            sudo apt-get install -y "$pkg" > /dev/null 2>&1
         elif command -v pacman &> /dev/null; then
-            sudo pacman -S --noconfirm $1 > /dev/null 2>&1
+            sudo pacman -S --noconfirm "$pkg" > /dev/null 2>&1
         elif command -v dnf &> /dev/null; then
-            sudo dnf install -y $1 > /dev/null 2>&1
+            sudo dnf install -y "$pkg" > /dev/null 2>&1
         elif command -v brew &> /dev/null; then
-            brew install $1 > /dev/null 2>&1
+            brew install "$pkg" > /dev/null 2>&1
         else
             echo -e "   - ${RED}Error:${NC} No supported package manager found (apt/pacman/dnf/brew)."
         fi
     else
-        echo -e "   - ${CYAN}$1${NC} is synchronized."
+        echo -e "   - ${CYAN}$pkg${NC} is synchronized."
     fi
 }
 
 for pkg in vim tmux btop git curl alacritty stow; do install_pkg "$pkg"; done
+install_pkg "delta" "git-delta"
 
 
 # Function to back up existing files or remove existing symlinks to prevent Stow conflicts
