@@ -1,5 +1,6 @@
 export PATH=${HOME}/.local/bin:${PATH}
 alias rm="rm -i"
+alias ls="ls --color=auto"
 
 # Search history based on what is already typed!
 bind '"\e[A": history-search-backward'
@@ -15,3 +16,7 @@ eval "$(starship init bash)"
 
 # --- Terminal Color Support (24-bit/Truecolor) ---
 export COLORTERM=truecolor
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/bgkang/.local/bin:$PATH"
