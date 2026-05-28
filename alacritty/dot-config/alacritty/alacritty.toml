@@ -1,0 +1,6 @@
+general.import = [
+"~/.config/alacritty/themes/magi.toml"
+]
+
+[window]
+opacity = 0.85
