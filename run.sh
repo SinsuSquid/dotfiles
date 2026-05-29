@@ -3,6 +3,9 @@
 # Move to the directory where this script is located
 cd "$(dirname "$0")"
 
+# Ensure the base config directory exists
+mkdir -p "${HOME}/.config"
+
 # --- Migration to ~/.dotfiles ---
 DOTFILES_DIR="$(pwd)"
 TARGET_DIR="${HOME}/.dotfiles"
