@@ -3,6 +3,22 @@
 # Move to the directory where this script is located
 cd "$(dirname "$0")"
 
+# --- Migration to ~/.dotfiles ---
+DOTFILES_DIR="$(pwd)"
+TARGET_DIR="${HOME}/.dotfiles"
+
+if [ "$DOTFILES_DIR" != "$TARGET_DIR" ]; then
+    if [ -d "$TARGET_DIR" ]; then
+        echo -e "⚠️  ${ORANGE}${TARGET_DIR}${NC} already exists! I'll use the existing one instead. (๑˃ᴗ˂)ﻭ"
+        cd "$TARGET_DIR"
+    else
+        echo -e "🚀 ${CYAN}Moving dotfiles to ${TARGET_DIR} for a cleaner home! ✨${NC}"
+        mv "$DOTFILES_DIR" "$TARGET_DIR"
+        cd "$TARGET_DIR"
+    fi
+fi
+
+
 # --- Colors & Aesthetics ---
 ORANGE='\033[38;2;236;116;32m'
 PURPLE='\033[38;2;150;95;212m'
