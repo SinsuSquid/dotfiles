@@ -17,6 +17,3 @@ eval "$(starship init bash)"
 # --- Terminal Color Support (24-bit/Truecolor) ---
 export COLORTERM=truecolor
 
-
-# Added by Antigravity CLI installer
-export PATH="/home/bgkang/.local/bin:$PATH"
