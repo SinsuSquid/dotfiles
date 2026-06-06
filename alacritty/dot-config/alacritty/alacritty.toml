@@ -3,7 +3,8 @@ general.import = [
 ]
 
 [window]
-opacity = 0.85
+opacity = 0.80
+decorations = "none"
 
 [[keyboard.bindings]]
 key = "Return"
