@@ -55,7 +55,7 @@ install_pkg() {
     fi
 }
 
-for pkg in vim tmux btop git curl alacritty stow; do install_pkg "$pkg"; done
+for pkg in vim tmux btop git curl stow; do install_pkg "$pkg"; done
 install_pkg "delta" "git-delta"
 
 
@@ -80,10 +80,9 @@ if command -v stow >/dev/null 2>&1; then
     prepare_stow "${HOME}/.bashrc"
     prepare_stow "${HOME}/.tmux.conf"
     prepare_stow "${HOME}/.vimrc"
-    prepare_stow "${HOME}/.config/alacritty/alacritty.toml"
     
     # Restow files (-R) to target (~/) with --dotfiles and be verbose (-v)
-    stow --dotfiles -v -R -t "${HOME}" bash tmux vim alacritty
+    stow --dotfiles -v -R -t "${HOME}" bash tmux vim
 else
     echo "⚠️ GNU Stow not detected! Falling back to the traditional copy/append workflow... 🛠️"
     
@@ -98,11 +97,6 @@ else
     # .vimrc
     echo "🖌️ Copying .vimrc..."
     cp ./vim/dot-vimrc "${HOME}/.vimrc"
-
-    # alacritty.toml
-    echo "🎛️ Copying alacritty.toml..."
-    mkdir -p "${HOME}/.config/alacritty"
-    cp ./alacritty/dot-config/alacritty/alacritty.toml "${HOME}/.config/alacritty/alacritty.toml"
 fi
 
 # Starship Prompt

@@ -11,8 +11,8 @@ call plug#end()
 set number
 set termguicolors
 set mouse=a
-colorscheme magi
+colorscheme kasane-teto
 set foldmethod=manual
 
-let g:airline_theme='magi'
+let g:airline_theme='kasane_teto'
 let g:airline_powerline_fonts = 1

@@ -1,15 +1,18 @@
 export PATH=${HOME}/.local/bin:${PATH}
 alias rm="rm -i"
 alias ls="ls --color=auto"
+export TERM=xterm-256color
 
 # Search history based on what is already typed!
 bind '"\e[A": history-search-backward'
 # Same for the down arrow so you can go back!
 bind '"\e[B": history-search-forward'
 
-# --- MAGI Theme Suite ---
-if [ -f ~/.MAGI-theme/env/magi.env.sh ]; then
-    source ~/.MAGI-theme/env/magi.env.sh
+# --- Kasane Teto Theme Suite ---
+if [ -f /home/bgkang/Downloads/KasaneTeto-VSCode/starship/teto.env.sh ]; then
+    source /home/bgkang/Downloads/KasaneTeto-VSCode/starship/teto.env.sh
+elif [ -f ~/.MAGI-theme/env/eva01.env.sh ]; then
+    source ~/.MAGI-theme/env/eva01.env.sh
 fi
 
 eval "$(starship init bash)"
@@ -17,3 +20,25 @@ eval "$(starship init bash)"
 # --- Terminal Color Support (24-bit/Truecolor) ---
 export COLORTERM=truecolor
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bgkang/.miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bgkang/.miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bgkang/.miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bgkang/.miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+alias vi="nvim"
+alias vim="nvim"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/bgkang/.local/bin:$PATH"
