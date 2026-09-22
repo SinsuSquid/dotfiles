@@ -4,7 +4,6 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
-Plug 'SinsuSquid/MAGI-theme'
 
 call plug#end()
 

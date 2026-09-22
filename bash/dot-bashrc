@@ -1,6 +1,8 @@
 export PATH=${HOME}/.local/bin:${PATH}
 alias rm="rm -i"
 alias ls="ls --color=auto"
+alias vi="nvim"
+alias vim="nvim"
 export TERM=xterm-256color
 
 # Search history based on what is already typed!
@@ -9,8 +11,8 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # --- Kasane Teto Theme Suite ---
-if [ -f /home/bgkang/Downloads/KasaneTeto-VSCode/starship/teto.env.sh ]; then
-    source /home/bgkang/Downloads/KasaneTeto-VSCode/starship/teto.env.sh
+if [ -f /home/bgkang/.KasaneTeto/starship/teto.env.sh ]; then
+    source /home/bgkang/.KasaneTeto/starship/teto.env.sh
 elif [ -f ~/.MAGI-theme/env/eva01.env.sh ]; then
     source ~/.MAGI-theme/env/eva01.env.sh
 fi
@@ -19,7 +21,6 @@ eval "$(starship init bash)"
 
 # --- Terminal Color Support (24-bit/Truecolor) ---
 export COLORTERM=truecolor
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -35,10 +36,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-alias vi="nvim"
-alias vim="nvim"
-
 
 # Added by Antigravity CLI installer
 export PATH="/home/bgkang/.local/bin:$PATH"
