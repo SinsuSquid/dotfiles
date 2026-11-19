@@ -4,14 +4,15 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
+Plug 'SinsuSquid/KasaneTeto-Theme'
 
 call plug#end()
 
 set number
 set termguicolors
 set mouse=a
-colorscheme kasane-teto
 set foldmethod=manual
+colorscheme kasane-teto
 
-let g:airline_theme='kasane_teto'
+let g:airline_theme = 'kasane_teto'
 let g:airline_powerline_fonts = 1
